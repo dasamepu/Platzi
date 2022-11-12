@@ -1,0 +1,72 @@
+int baselineTemp;
+int celsius;
+int turno = 1;
+
+void setup()
+{
+	pinMode(A0, INPUT);
+    Serial.begin(9600);
+      
+    pinMode(2, OUTPUT);
+	pinMode(3, OUTPUT);
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+}
+void loop()
+{
+	baselineTemp = 15;
+  
+  //tomando el valor del sensor de temperatura
+  	int reading = analogRead(A0);
+  
+  //convirtiendo el reading a grados celsius
+ 	float celsius = (reading - 104) * 100 / 203;
+  //la formula es una adaptación de la formula 
+  //para pasar de farenheit a celsius, el 100 es 
+  //la diferencia entre el punto de fusión y ebullición en celsius
+  //el 203 es lo mismo pero en la escala que nos da el sensor.
+  //y el 104 es el punto de fusión en la escala que nos da el sensor
+  
+  if (celsius < baselineTemp)
+  {
+    digitalWrite(5, LOW);
+  	digitalWrite(7, LOW);
+  }
+    
+  if (celsius >= baselineTemp && celsius < baselineTemp + 20)
+  {
+  	digitalWrite(5, HIGH);
+    digitalWrite(7, LOW);
+  }
+  
+  if (celsius >= baselineTemp + 20 && celsius < baselineTemp + 40)
+  {
+  	digitalWrite(5, LOW);
+    digitalWrite(7, HIGH);
+  }
+  
+  if (celsius >= baselineTemp + 40)
+  {
+  	if(turno)
+    {
+     digitalWrite(5, LOW);
+     digitalWrite(7, HIGH);
+      delay(100);
+     digitalWrite(5, HIGH);
+     digitalWrite(7, LOW);
+      delay(100);
+      
+     turno = 0;
+    }
+    else if(turno == 0)
+    {
+    	turno = 1;
+    }
+  }
+    
+  //imprimir la informacion en el serial monitor
+  	Serial.print(celsius);
+  	Serial.print("C \n");
+  
+  delay(200);
+}
