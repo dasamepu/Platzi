@@ -1,0 +1,28 @@
+const myArray = new Array(20);
+    const chars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
+    "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+    const symbols = ["!", "#", "$", "%", "&", "*", "+", "-", ".", "/"];
+
+    var i = 0;
+    
+    generatePassword();
+
+    function generatePassword(){
+        if (i<20) {
+            if (i%2==0) {
+                let r = Math.floor((Math.random() * 10)); //generar numeros entre 0 y 9
+                myArray[i] = r;  
+            }
+            if (i%3==0 && i!=0 && i!=6 && i!=12 && i!=18) {
+                let r2 = Math.floor((Math.random() * chars.length)); 
+                myArray[i] = chars[r2];    
+            }
+            if (i==1 || i==5 || i==7 || i==11 || i==13 || i==17 || i==19) {
+                let r3 = Math.floor((Math.random() * symbols.length));
+                myArray[i] = symbols[r3];
+            }
+            i = i + 1;
+            generatePassword();
+        }
+    }
+    console.log(myArray.join(''));
