@@ -1,5 +1,5 @@
 <?php
-
+require_once("car.php");
 class UberX extends Car{
     public $brand;
     public $model;
