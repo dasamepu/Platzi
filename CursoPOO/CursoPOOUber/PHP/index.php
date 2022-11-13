@@ -6,9 +6,14 @@ require_once("uberPool.php");
 require_once("uberBlack.php");
 require_once("uberVan.php");
 require_once("account.php");
+require_once("payment.php");
+require_once("tarjeta.php");
+require_once("paypal.php");
+require_once("efectivo.php");
 
-$uberX = new UberX("ASD123", new Account("Andres", "AND123"), "Chevrolet", "Spark");
-$uberX->printDataCar();
 
-$uberPool = new UberPool("DFG123", new Account("Andrea", "ANA123"), "Dodge", "NOCDEMODELOS");
-$uberPool->printDataCar();
+$UberDeAndres = new Car("ASD123", new Account("Andres", "AND123"), "Chevrolet", "Spark");
+$UberDeAndres->printDataCar();
+
+$pay1 = new Payment("ID098");
+$pay1->printDataPayment();

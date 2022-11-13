@@ -8,14 +8,14 @@ from uberBlack import UberBlack
 if __name__ == "__main__":
     print("hola mundo")
     
-    UberDeJuan = UberBlack("ABC123",vars(Account("Juan", "JUAN123")), "Chevy", "Chino")
+    UberDeJuan = UberBlack("ABC123",vars(Account("Juan", "JUAN123")), "Chevy", "cuero")
     print(vars(UberDeJuan))
 
-    UberDeAntonio = UberPool("CVB123",vars(Account("Antonio", "JUAN123")), "Chevy", "Chino")
+    UberDeAntonio = UberPool("CVB123",vars(Account("Antonio", "JUAN123")), "Chevy", "cuero")
     print(vars(UberDeAntonio))
 
-    UberDePedro = UberX("SDF567",vars(Account("Pedro", "JUAN123")), "Chevy", "Chino")
+    UberDePedro = UberX("SDF567",vars(Account("Pedro", "JUAN123")), "Chevy", "cuero")
     print(vars(UberDePedro))
 
-    UberDeLuis = UberVan("KLJ456",vars(Account("Luis", "JUAN123")), "Chevy", "Chino")
+    UberDeLuis = UberVan("KLJ456",vars(Account("Luis", "JUAN123")), "Chevy", "cuero")
     print(vars(UberDeLuis))
