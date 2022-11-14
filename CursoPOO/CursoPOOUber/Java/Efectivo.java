@@ -1,6 +1,6 @@
 class Efectivo extends Payment{
     
-    public Efectivo(Integer id) {
+    public Efectivo(String id) {
         super(id);
     }
 }

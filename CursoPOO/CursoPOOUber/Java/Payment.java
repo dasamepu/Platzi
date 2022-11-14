@@ -1,11 +1,13 @@
 class Payment {
-    Integer id;    
+    String id;    
 
-    public Payment(Integer id){
+    public Payment(String id){
         this.id = id;
     }
 
     void printDataPayment(){
         System.out.println("id: " + id);
     }
+
+    
 }
