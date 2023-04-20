@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    font-size: 1.6rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+}
+
+.title {
+    background-color: red;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    bottom: -1.9rem;
+    padding: 1rem;
+}
+
+.content {
+    width: 50%;
+    background-color: aqua;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content img {
+    width: 21.5rem;
+}

@@ -1,0 +1,25 @@
+String myString = "dasamepu";
+
+
+char myArray[] = myString.toCharArray();              //creamos un array de caracteres (char) de una cadena de texto (string) dada
+
+toUpperCase();
+
+function toUpperCase(){
+  var i = 0;
+  
+  
+  if(i == 0 && myArray[i] != ' ' ||                   //si el primer caracter del array no es NULL
+     i == myArray.length && myArray[i] != ' '){       //si el ultimo caracter del array no es NULL
+   
+    if(myArray[i] >= 'a' && myArray <= 'z'){          //si el caracter esta en minuscula
+      myArray[i] = (char)(myArray[i] - 'a' + 'A');    //convertir el caracter a mayuscula
+                                                      //ver "ASCII table" para comprender la opercaión
+      i = i + 1;
+    }
+    
+  }else{
+    i = i + 1;
+  }
+  toUpperCase();
+}

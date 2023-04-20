@@ -1,0 +1,33 @@
+.combinador {
+  border: solid black 2px;
+  margin: 5px;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+/* ---------------------------------- */
+
+/* Adjacent sibiling "+" */
+
+#combinador_adjacent-sibiling h2 + p {
+  color: red;
+}
+
+/* General sibiling "~" */
+
+#combinador_general-sibiling h2 ~ p {
+  color: red;
+}
+
+/* Child ">" */
+
+#combinador_child div > p {
+  color: red;
+}
+
+/* Descendant "no symbol" */
+
+#combinador_descendant p {
+  color: red;
+}

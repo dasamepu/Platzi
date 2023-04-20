@@ -1,0 +1,53 @@
+#include <Servo.h>
+
+Servo miServo;
+int valorLDR;
+int turno = 0;
+
+void setup()
+{
+	pinMode(13, OUTPUT);
+  	miServo.attach(9);
+  //servo trabaja en e pin 9
+  
+  	miServo.write(90);
+  //servo en la posicion de 90 grados
+  	delay(1000);
+  	Serial.begin(9600);
+  //abrir puerto serial
+}
+
+void loop()
+{
+	digitalWrite(13,HIGH);
+  	delay(500);
+  //esperar 500 milisegundos
+  
+  	digitalWrite(13, LOW);
+  	delay(500);
+  
+  	valorLDR = analogRead(0);
+  //obtener el valor del sensor
+  
+  	Serial.println(valorLDR);
+  //mostrar el valor del sensor
+  
+  if(valorLDR > 800)
+  {
+  	if(turno == 1)
+    {
+    	turno = 0;
+      miServo.write(70);
+    }
+    else
+    {
+    	turno = 1;
+      miServo.write(110);
+    }
+  }
+  else
+  {
+  	miServo.write(150);
+  }
+  delay(500);
+}
