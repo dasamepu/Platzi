@@ -3,37 +3,73 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-size: 1.6rem;
 }
-.container {
+
+.container1 {
   border: 0.3rem solid black;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
+
+.container2 {
+  border: 0.3rem solid black;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container3 {
+  border: 0.3rem solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.container4 {
+  border: 0.3rem solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container5 {
+  border: 0.3rem solid black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container6 {
+  border: 0.3rem solid black;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .box {
+  width: 10rem;
   height: 10rem;
-  flex-basis: 10rem;
-  flex-grow: 1;
 }
+
 .box1 {
-  background-color: blue;
+  background-color: gold;
+  
 }
+
 .box2 {
-  background-color: blueviolet;
+  background-color: aqua;
 }
 .box3 {
-  background-color: burlywood;
+  background-color: red;
 }
 .box4 {
-  background-color: cadetblue;
+  background-color: green;
 }
 .box5 {
-  background-color: coral;
+  background-color: violet;
 }
 .box6 {
-  background-color: salmon;
+  background-color: blue;
 }
