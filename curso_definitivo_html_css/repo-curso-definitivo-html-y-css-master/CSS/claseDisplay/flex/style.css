@@ -12,6 +12,10 @@ body {
   font-size: 1.6rem;
 }
 
+p {
+  text-align: center;
+}
+
 .container1 {
   border: 0.3rem solid black;
   display: flex;
