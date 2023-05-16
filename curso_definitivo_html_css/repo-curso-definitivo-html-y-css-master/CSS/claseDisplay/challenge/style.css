@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 html{
@@ -71,8 +71,11 @@ main .content {
 footer {
     background-color: green;
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     vertical-align: bottom;
     font-size: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    
 }
