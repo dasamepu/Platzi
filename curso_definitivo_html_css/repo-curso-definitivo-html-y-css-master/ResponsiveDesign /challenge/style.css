@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    height: 105px;
+}
+
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11 {
+    width: 100%;
+    min-width: 105px;
+    height: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: black 0.2rem solid;
+}
+
+.div1, .div3, .div5, .div7, .div9, .div11  {
+    background-color: #004D98;
+}
+
+.div2, .div4, .div6, .div8, .div10 {
+    background-color: #A50044;
+}
+
+@media (min-width: 600px) {
+    .div2, .div3, .div4, .div5, .div6, .div8, .div9, .div11 {
+        width: 50%;
+    }
+
+    .div1 {
+        order: 1;
+        background-color: #A50044;
+    }
+
+    .div2 {
+        order: 4;
+    }
+
+    .div3 {
+        order: 2;
+    }
+
+    .div4 {
+        order: 3;
+        background-color: #004D98;
+    }
+
+    .div5 {
+        order: 5;
+        background-color: #A50044;
+    }
+
+    .div6 {
+        order: 7;
+    }
+
+    .div7 {
+        order: 6;
+    }
+
+    .div8 {
+        order: 8;
+    }
+
+    .div9 {
+        order: 9;
+    }
+
+    .div10 {
+        order: 11;
+    }
+
+    .div11 {
+        order: 10;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .div2, .div3, .div4, .div5 {
+        width: 25%;
+    }
+
+    .div2, .div3, .div4, .div5, .div9, .div10, .div11 {
+        background-color: #004D98;
+    }
+
+    .div1, .div7, .div6, .div8 {
+        background-color: #A50044;
+    }
+
+    .div1 {
+        order: 1;
+    }    
+
+    .div2 {
+        order: 2;
+    }
+
+    .div3 {
+        order: 3;
+    }
+
+    .div4 {
+        order: 4;
+    }
+
+    .div5 {
+        order: 5;
+    }
+
+    .div6 {
+        order: 7;
+    }
+
+    .div7 {
+        order: 6;
+    }
+
+    .div8 {
+        order: 8;
+    }
+
+    .div9 {
+        order: 9;
+        flex-direction: row-reverse;
+        width: 33.3333%;
+    }
+
+    .div10 {
+        order: 10;
+        width: 33.3333%;
+    }
+
+    .div11 {
+        order: 11;
+        width: 33.3333%;
+    }
+}
