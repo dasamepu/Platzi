@@ -1,0 +1,27 @@
+# Syntax Colouring Map For RS485
+
+
+# Data types (KEYWORD1)
+RS485	KEYWORD1
+
+
+# Methods and Functions (KEYWORD2)
+begin	KEYWORD2
+
+getDeviceID	KEYWORD2
+
+setTXmode	KEYWORD2
+setRXmode	KEYWORD2
+getMode	KEYWORD2
+
+
+# EXPERIMENTAL
+send	KEYWORD2
+receive	KEYWORD2
+
+
+# Constants (LITERAL1)
+RS485_LIB_VERSION	LITERAL1
+
+RS485_YIELD_ENABLE	LITERAL1
+
