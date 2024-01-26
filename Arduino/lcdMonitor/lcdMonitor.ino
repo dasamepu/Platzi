@@ -1,3 +1,8 @@
+// includes the LiquidCrystal Library 
+#include <LiquidCrystal.h> 
+// Creates an LCD object. Parameters: (rs, enable, d4, d5, d6, d7) 
+LiquidCrystal lcd(12, 11, 2, 3, 4, 5); 
+
 //incluimos la libreria
 #include "dht.h"
 
@@ -11,31 +16,22 @@ void setup()
 { 
   //Inizializamos la comunicación serial a una velocidad de 9600 baudios 
   Serial.begin(9600);
-  
-  //esperamos 500 milisegundos
-  delay(500);
-  
-  //Imprimimos el titulo
-  Serial.println("DHT11 Humidity & temperature Sensor\n\n");
-  
-  //Esperamos 1000 milisegundos
-  delay(1000); 
-} 
+  lcd.begin(16, 2);
+}
+
 void loop()
 { 
   //llamamos al metodo "read11()" del objeto DHT para leer los datos del sensor
   DHT.read11(dhtpin);    
   
-  //Imprimimos la humedad en el monitor
-  Serial.print("Current humidity = ");
-  Serial.print(DHT.humidity);
-  Serial.print("%  ");
-  
   //Imprimimos la temperatura en el monitor
   Serial.print("temperature = ");
   Serial.print(DHT.temperature); 
-  Serial.println("C  ");    
+  Serial.println("C  ");  
+
+  lcd.setCursor(2, 0);
+  lcd.print("temperature: ");
+  lcd.setCursor(2, 1);
+  lcd.print(DHT.temperature); 
   
-  //esperamos 1000 milisegundos antes de imprimir los datos otra vez
-  delay(1000); 
 } 

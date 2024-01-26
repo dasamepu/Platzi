@@ -14,6 +14,9 @@ void loop() {
  
   Serial.println(digitalRead(boton));
 
+    //When boton is LOW means is not been pressed
+    //When boton is HIGH means is been pressed
+
   if(digitalRead(boton) == LOW){
     digitalWrite(Led, HIGH);
   }else{
